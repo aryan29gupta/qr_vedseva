@@ -25,12 +25,24 @@
         position: relative;
       }
       .header {
-        text-align: center;
-        font-size: 18px;
-        font-weight: bold;
+        display: flex;
+        align-items: center;
         border-bottom: 1px solid #ddd;
         padding-bottom: 10px;
         margin-bottom: 15px;
+        position: relative;
+      }
+      .qr-code {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        left: 0;
+      }
+      .header-text {
+        flex-grow: 1;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
       }
       .section {
         margin-top: 15px;
@@ -67,8 +79,11 @@
   <body>
     <div class="container">
       <div class="header">
-        Dr. MOHIT CHOPRA, MD<br />17/10 Old Rajendra Nagar-110060<br />Phone no:
-        +91-XXXXXXXXXX
+        <img src="qr-code.png" alt="QR Code" class="qr-code" />
+        <div class="header-text">
+          Dr. MOHIT CHOPRA, MD<br />17/10 Old Rajendra Nagar-110060<br />Phone no:
+          +91-XXXXXXXXXX
+        </div>
       </div>
 
       <div class="section">
@@ -113,7 +128,6 @@
     </div>
 
     <script>
-      // The entire existing script remains the same as in the original document
       document.addEventListener("DOMContentLoaded", function () {
         // Format and display current date
         const currentDate = new Date();
@@ -128,9 +142,6 @@
 
       // All other functions remain exactly the same as in the original script
       // (loadUserDataFromLogin, updatePatientInfoFromLogin, useDefaultPatientInfo, etc.)
-      
-      // Note: The full script from the original document is included here
-      // but not displayed in full due to length constraints
     </script>
   </body>
 </html>
